@@ -3,74 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naufal Portfolio</title>
-
+  <title>Portfolio Naufal</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div id="loader">Loading...</div>
-
 <header>
-  <h1>NAUFAL</h1>
+  <h1>Naufal</h1>
   <nav>
-    <a href="#hero">Home</a>
     <a href="#about">About</a>
-    <a href="#project">Project</a>
+    <a href="#projects">Project</a>
     <a href="#contact">Contact</a>
   </nav>
-  <button id="themeToggle">🌙</button>
 </header>
 
-<section class="hero" id="hero">
-  <h2>Welcome</h2>
-  <h1>I'm Naufal</h1>
-  <p id="typing"></p>
+<!-- HERO -->
+<section class="hero">
+  <h2>Hi, I'm Muhammad Naufal Fawwaz</h2>
+  <p>Web Developer | Student</p>
+  <a href="#contact" class="btn">Contact Me</a>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
-  <h3>About Me</h3>
-    <p>
-    Perkenalkan, saya Muhammad Naufal Fawwaz. Saya adalah seorang pelajar di bidang 
-    Rekayasa Perangkat Lunak yang memiliki ketertarikan besar pada dunia web development. 
-    Saya fokus pada pembuatan website dengan tampilan yang sederhana, modern, dan nyaman digunakan.
-    
-    Saya telah mempelajari HTML, CSS, dan JavaScript, serta menerapkannya dalam beberapa proyek 
-    seperti website portfolio dan landing page. Saya selalu berusaha untuk membuat desain yang tidak hanya 
-    menarik secara visual, tetapi juga mudah digunakan oleh pengguna.
-    
-    Saya adalah orang yang suka belajar hal baru dan terus berkembang. 
-    Saya percaya bahwa dengan konsistensi dan latihan, saya bisa menjadi developer yang lebih baik setiap harinya.
-    
-    Tujuan saya adalah menjadi seorang web developer profesional dan mampu menciptakan karya yang bermanfaat 
-    serta dapat digunakan oleh banyak orang.
-    </p>
-</section>
+  <div class="about-container">
 
-<section id="project">
-  <h3>Projects</h3>
-  <div class="projects">
-    <div class="card">Portfolio Website</div>
-    <div class="card">Landing Page</div>
-    <div class="card">UI Design</div>
+    <div class="about-img">
+      <div class="img-wrapper">
+        <img src="foto.jpg" alt="Foto Naufal">
+      </div>
+    </div>
+
+    <div class="about-text">
+      <h3>About Me</h3>
+      <p>
+        Saya adalah Muhammad Naufal Fawwaz, seorang pelajar di bidang Rekayasa Perangkat Lunak 
+        yang memiliki minat besar dalam dunia web development, khususnya frontend development. 
+        Saya fokus membuat tampilan website yang modern, simple, dan user-friendly.
+      </p>
+    </div>
+
   </div>
 </section>
 
+<!-- PROJECT -->
+<section id="projects">
+  <h3>Projects</h3>
+  <div class="projects">
+    <div class="card">
+      <h4>Portfolio Website</h4>
+      <p>Website pribadi dengan desain minimalis.</p>
+    </div>
+    <div class="card">
+      <h4>Landing Page</h4>
+      <p>Desain landing page modern & responsive.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
 <section id="contact">
   <h3>Contact</h3>
-  <form>
-    <input type="text" placeholder="Nama" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Pesan" required></textarea>
-    <button type="submit">Kirim</button>
-  </form>
+  <p>Email: emailkamu@gmail.com</p>
 </section>
 
 <footer>
-  <p>© 2026 Naufal</p>
+  <p>© 2026 Muhammad Naufal Fawwaz</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
