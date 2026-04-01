@@ -67,7 +67,7 @@ nav a:hover {
 .projects {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 15px;
+  gap: 35px;
 }
 
 .card {
