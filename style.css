@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-  transition: 0.3s;
 }
 
 body {
@@ -21,143 +20,44 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 999;
+  animation: fadeOut 1s ease 1.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /* HEADER */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
-  position: sticky;
-  top: 0;
-}
-
-header.scrolled {
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(10px);
-}
-
-nav a {
-  margin: 0 10px;
-  color: #aaa;
-  text-decoration: none;
-}
-
-nav a.active {
-  color: #fff;
-  border-bottom: 2px solid #fff;
+  padding: 20px;
 }
 
 /* HERO */
 .hero {
-  height: 80vh;
-  background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f') center/cover;
+  height: 60vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.btn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  border: 1px solid #fff;
-  color: #fff;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* FEATURES */
-.features {
-  display: flex;
-}
-
-.box {
-  flex: 1;
-  padding: 40px;
-  text-align: center;
-}
-
-.red { background: #e74c3c; }
-.green { background: #16a085; }
-.orange { background: #f39c12; }
-
-/* ABOUT */
-.about {
-  display: flex;
-  padding: 60px;
-  gap: 20px;
-}
-
-.about-img {
-  flex: 1;
-  height: 250px;
-  background: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c') center/cover;
-}
-
-.about-text {
-  flex: 1;
-}
-
-/* PROJECT */
-section {
-  padding: 60px;
+  flex-direction: column;
 }
 
 .projects {
   display: flex;
-  gap: 20px;
-}
-
-.card {
-  flex: 1;
-  background: #1a1a1a;
-  padding: 30px;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-.card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* CONTACT */
-form {
-  display: flex;
-  flex-direction: column;
   gap: 10px;
 }
 
-input, textarea {
-  padding: 10px;
-  border: none;
-}
-
-button {
-  padding: 10px;
-  cursor: pointer;
+.card {
+  padding: 20px;
+  background: #1a1a1a;
 }
 
 /* LIGHT MODE */
 body.light {
   background: #fff;
   color: #000;
-}
-
-body.light .card {
-  background: #eee;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .features,
-  .about,
-  .projects {
-    flex-direction: column;
-  }
 }
