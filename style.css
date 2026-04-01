@@ -8,6 +8,7 @@
 body {
   background: #0f0f0f;
   color: #fff;
+  text-align: right;
 }
 
 /* LOADER */
@@ -30,6 +31,13 @@ body {
   }
 }
 
+/* CONTAINER */
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
 /* HEADER */
 header {
   display: flex;
@@ -37,27 +45,117 @@ header {
   padding: 20px;
 }
 
-/* HERO */
-.hero {
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+/* NAV */
+nav a {
+  margin-left: 15px;
+  color: #aaa;
+  text-decoration: none;
 }
 
+nav a:hover {
+  color: #fff;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* TITLE LINE */
+h3 {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+h3::after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+}
+
+/* PROJECT */
 .projects {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-end;
 }
 
 .card {
+  width: 300px;
   padding: 20px;
   background: #1a1a1a;
+  border: 1px solid #333;
+  transform: translateX(50px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+input, textarea {
+  width: 300px;
+  padding: 10px;
+  border: none;
+}
+
+/* BUTTON */
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
 }
 
 /* LIGHT MODE */
 body.light {
   background: #fff;
   color: #000;
+}
+
+body.light .card {
+  background: #eee;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  body {
+    text-align: center;
+  }
+
+  .projects {
+    align-items: center;
+  }
+
+  form {
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+  }
 }
