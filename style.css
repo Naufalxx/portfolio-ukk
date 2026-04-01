@@ -59,20 +59,38 @@ nav a:hover {
   color: #ccc;
 }
 
-/* PROJECT */
+/* PROJECT SECTION */
 #projects {
-  padding: 40px 20px;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
+/* GRID PROJECT */
 .projects {
-  display: grid;
-  grid-template-columns: 5fr;
-  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* CARD */
 .card {
-  padding: 30px;
+  padding: 20px;
   border: 1px solid #333;
+  border-radius: 10px;
+  background: #1a1a1a;
+
+  /* INI YANG BIKIN GA KEGEDEAN */
+  max-width: 600px;
+  margin: auto;
+
+  transition: 0.3s;
+}
+
+/* HOVER BIAR KEREN */
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #fff;
 }
 
 /* CONTACT */
