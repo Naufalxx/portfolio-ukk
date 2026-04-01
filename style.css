@@ -5,6 +5,10 @@
   font-family: 'Inter', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #0f0f0f;
   color: #eaeaea;
@@ -13,12 +17,47 @@ body {
 
 /* HEADER */
 header {
-  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+/* NAV */
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 14px;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #fff;
 }
 
 /* PROFILE */
 .profile {
-  padding: 60px 20px;
+  padding: 80px 20px;
   max-width: 700px;
   margin: auto;
 }
@@ -95,10 +134,12 @@ header {
 .card {
   padding: 20px;
   border: 1px solid #333;
+  transition: 0.3s;
 }
 
 .card:hover {
   border-color: #fff;
+  transform: translateY(-5px);
 }
 
 /* CONTACT */
@@ -110,4 +151,12 @@ header {
 footer {
   padding: 20px;
   color: #777;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
