@@ -8,41 +8,46 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-  <div id="loader">
-  <h1>Loading...</h1>
-</div>
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+  <h1>Loading...</h1>
+</div>
+
+<!-- HEADER -->
 <header>
-  <button id="themeToggle">🌙</button>
   <h1>NAUFAL</h1>
   <nav>
-    <a href="#">Home</a>
+    <a href="#hero">Home</a>
     <a href="#about">About</a>
     <a href="#project">Project</a>
+    <a href="#contact">Contact</a>
   </nav>
+  <button id="themeToggle">🌙</button>
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="hero">
   <h2>Welcome to</h2>
   <h1>My Portfolio</h1>
   <p id="typing"></p>
+  <a href="#project" class="btn">See My Work</a>
 </section>
 
 <!-- FEATURES -->
 <section class="features">
   <div class="box red">
     <h3>Responsive</h3>
-    <p>Website tampil bagus di semua device.</p>
+    <p>Website tampil di semua device.</p>
   </div>
   <div class="box green">
-    <h3>Easy to use</h3>
-    <p>Desain simple dan mudah dipahami.</p>
+    <h3>Modern Design</h3>
+    <p>Desain clean & kekinian.</p>
   </div>
   <div class="box orange">
-    <h3>Quick Support</h3>
-    <p>Siap membantu dengan cepat.</p>
+    <h3>Fast Performance</h3>
+    <p>Ringan & cepat diakses.</p>
   </div>
 </section>
 
@@ -52,10 +57,10 @@
   <div class="about-text">
     <h3>About Me</h3>
     <p>
-      Saya adalah Muhammad Naufal Fawwaz, seorang pelajar RPL yang fokus 
-      pada pengembangan website modern, simple, dan interaktif.
+      Saya Muhammad Naufal Fawwaz, pelajar RPL yang fokus pada 
+      pembuatan website modern, interaktif, dan user-friendly.
     </p>
-    <a href="#" class="btn">Learn More</a>
+    <a href="#" class="btn">Download CV</a>
   </div>
 </section>
 
@@ -63,14 +68,26 @@
 <section id="project">
   <h3>Recent Projects</h3>
   <div class="projects">
-    <div class="card">Project 1</div>
-    <div class="card">Project 2</div>
-    <div class="card">Project 3</div>
+    <div class="card">Website Portfolio</div>
+    <div class="card">Landing Page</div>
+    <div class="card">UI Design</div>
   </div>
 </section>
 
+<!-- CONTACT -->
+<section id="contact">
+  <h3>Contact Me</h3>
+  <form>
+    <input type="text" placeholder="Nama" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Pesan" required></textarea>
+    <button type="submit">Kirim</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <p>© 2026 Naufal</p>
+  <p>© 2026 Naufal | Built with 🔥</p>
 </footer>
 
 <script src="script.js"></script>
