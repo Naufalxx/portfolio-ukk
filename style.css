@@ -66,13 +66,13 @@ nav a:hover {
 
 .projects {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 5fr;
   gap: 15px;
 }
 
 .card {
   padding: 30px;
-  border: 10px solid #333;
+  border: 1px solid #333;
 }
 
 /* CONTACT */
