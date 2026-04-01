@@ -1,8 +1,10 @@
 // LOADER
-window.addEventListener("load", () => {
-  document.getElementById("loader").style.display = "none";
-});
-
+window.onload = function() {
+  const loader = document.getElementById("loader");
+  if (loader) {
+    loader.style.display = "none";
+  }
+};
 // NAVBAR SCROLL
 const header = document.querySelector("header");
 window.addEventListener("scroll", () => {
