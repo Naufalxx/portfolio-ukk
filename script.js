@@ -2,40 +2,34 @@
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
-
-// FADE IN PROJECT
-const cards = document.querySelectorAll('.card');
-
-window.addEventListener('scroll', () => {
-  const triggerBottom = window.innerHeight * 0.85;
-
-  cards.forEach(card => {
-    const cardTop = card.getBoundingClientRect().top;
-
-    if (cardTop < triggerBottom) {
-      card.classList.add('show');
-    }
-  });
+  header.classList.toggle("scrolled", window.scrollY > 50);
 });
 
 // TYPING EFFECT
 const text = "Web Developer | Student";
 let i = 0;
+const typingEl = document.getElementById("typing");
 
 function typing() {
   if (i < text.length) {
-    document.querySelector(".hero p").innerHTML += text.charAt(i);
+    typingEl.innerHTML += text.charAt(i);
     i++;
     setTimeout(typing, 50);
   }
 }
 
-// kosongin dulu biar ga dobel
-document.querySelector(".hero p").innerHTML = "";
 typing();
+
+// SCROLL ANIMATION
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.85;
+
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if (top < trigger) {
+      card.classList.add("show");
+    }
+  });
+});
