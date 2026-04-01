@@ -1,46 +1,40 @@
-// LOADER
-window.onload = function () {
-  const loader = document.getElementById("loader");
-  if (loader) loader.style.display = "none";
-};
+document.getElementById("f1Form").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-// TYPING EFFECT
-const typingEl = document.getElementById("typing");
+  let nama = document.getElementById("nama").value;
+  let driver = document.querySelector('input[name="driver"]:checked');
+  let posisi = document.getElementById("posisi").value;
 
-if (typingEl) {
-  const text = "Web Developer | Student";
-  let i = 0;
+  let teams = [];
+  document.querySelectorAll('input[type="checkbox"]:checked')
+    .forEach(cb => teams.push(cb.value));
 
-  function typing() {
-    if (i < text.length) {
-      typingEl.innerHTML += text.charAt(i);
-      i++;
-      setTimeout(typing, 50);
-    }
-  }
+  let data = {
+    nama: nama,
+    driver: driver ? driver.value : "-",
+    team: teams.join(", "),
+    posisi: posisi
+  };
 
-  typing();
-}
+  // SIMPAN KE LOCAL STORAGE
+  localStorage.setItem("f1data", JSON.stringify(data));
 
-// SCROLL ANIMATION
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll", () => {
-  const trigger = window.innerHeight * 0.85;
-
-  cards.forEach(card => {
-    if (card.getBoundingClientRect().top < trigger) {
-      card.classList.add("show");
-    }
-  });
+  tampilkanData();
 });
 
-// THEME TOGGLE
-const toggle = document.getElementById("themeToggle");
+function tampilkanData() {
+  let data = JSON.parse(localStorage.getItem("f1data"));
 
-if (toggle) {
-  toggle.onclick = () => {
-    document.body.classList.toggle("light");
-    toggle.textContent = document.body.classList.contains("light") ? "☀️" : "🌙";
-  };
+  if (!data) return;
+
+  document.getElementById("output").innerHTML = `
+    <h4>Data Tersimpan:</h4>
+    <p>Nama: ${data.nama}</p>
+    <p>Pembalap: ${data.driver}</p>
+    <p>Tim: ${data.team}</p>
+    <p>Posisi: ${data.posisi}</p>
+  `;
 }
+
+// LOAD SAAT REFRESH
+tampilkanData();
