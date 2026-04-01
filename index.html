@@ -2,7 +2,6 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Naufal</title>
 
   <link rel="stylesheet" href="style.css">
@@ -15,83 +14,63 @@
   <nav>
     <a href="#about">Home</a>
     <a href="#projects">Project</a>
-    <a href="#f1">F1 Data</a>
-    <a href="#contact">Contact</a>
+    <a href="#f1">F1</a>
   </nav>
 </header>
 
-<!-- PROFILE -->
 <section id="about">
   <div class="profile">
     <div class="img-wrapper">
-      <img src="foto.jpg">
+      <img src="ganteng.jpeg">
     </div>
 
     <h2>Muhammad Naufal Fawwaz</h2>
-    <p>
-      Saya adalah pelajar RPL yang fokus pada pembuatan website modern,
-      simple, dan user-friendly.
-    </p>
+    <p>Pelajar RPL yang fokus web development.</p>
   </div>
 </section>
 
-<!-- PROJECT -->
 <section id="projects">
   <h3>Projects</h3>
 
-  <div class="projects">
-    <div class="card">
-      <h4>Portfolio Website</h4>
-      <p>Website pribadi sederhana.</p>
-    </div>
-
-    <div class="card">
-      <h4>Landing Page</h4>
-      <p>Desain modern dan responsive.</p>
-    </div>
+  <div class="card">
+    <h4>Portfolio</h4>
+    <p>Website sederhana</p>
   </div>
 </section>
 
-<!-- F1 FORM -->
+<!-- F1 -->
 <section id="f1">
-  <h3>F1 Race Input</h3>
+  <h3>F1 Form</h3>
 
   <form id="f1Form">
 
-    <input type="text" id="nama" placeholder="Nama Anda" required>
+    <input type="text" id="nama" placeholder="Nama" required>
 
     <p>Pembalap:</p>
     <label><input type="radio" name="driver" value="Verstappen"> Verstappen</label>
     <label><input type="radio" name="driver" value="Hamilton"> Hamilton</label>
-    <label><input type="radio" name="driver" value="Leclerc"> Leclerc</label>
 
     <p>Tim:</p>
     <label><input type="checkbox" value="Red Bull"> Red Bull</label>
     <label><input type="checkbox" value="Mercedes"> Mercedes</label>
-    <label><input type="checkbox" value="Ferrari"> Ferrari</label>
 
     <p>Posisi:</p>
     <select id="posisi">
       <option value="">-- pilih --</option>
       <option>1</option>
       <option>2</option>
-      <option>3</option>
-      <option>DNF</option>
     </select>
 
     <button type="submit">Simpan</button>
+
   </form>
 
   <div id="output"></div>
 
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <h3>Contact</h3>
-  <p>Email: naufal@gmail.com</p>
-</section>
-
+<!-- JS DI PALING BAWAH -->
 <script src="script.js"></script>
+
 </body>
 </html>
