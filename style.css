@@ -28,9 +28,29 @@ nav a:hover {
   color: #fff;
 }
 
-/* PROFILE */
 .profile {
   padding: 60px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* NAMA */
+.profile h2 {
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+/* DESKRIPSI */
+.profile p {
+  margin-top: 15px;
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 15px;
+
+  /* INI KUNCI BIAR RAPI */
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* FOTO */
