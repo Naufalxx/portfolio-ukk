@@ -5,21 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Naufal</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
   <h1>NFL</h1>
-
   <nav>
     <a href="#about">Home</a>
     <a href="#projects">Project</a>
+    <a href="#f1">F1 Data</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -27,26 +23,15 @@
 <!-- PROFILE -->
 <section id="about">
   <div class="profile">
-
     <div class="img-wrapper">
-      <img src="ganteng.jpeg" alt="Foto">
+      <img src="foto.jpg">
     </div>
 
     <h2>Muhammad Naufal Fawwaz</h2>
-
     <p>
-      Perkenalkan, saya Muhammad Naufal Fawwaz. Saya adalah seorang pelajar di bidang 
-      Rekayasa Perangkat Lunak yang memiliki ketertarikan besar pada dunia web development. 
-      Saya fokus pada pembuatan website dengan tampilan yang sederhana, modern, dan nyaman digunakan.
-      
-      Saya telah mempelajari HTML, CSS, dan JavaScript, serta menerapkannya dalam beberapa proyek 
-      seperti website portfolio dan landing page. Saya selalu berusaha untuk membuat desain yang tidak hanya 
-      menarik secara visual, tetapi juga mudah digunakan oleh pengguna.
-      
-      Tujuan saya adalah menjadi seorang web developer profesional dan mampu menciptakan karya yang bermanfaat 
-      serta dapat digunakan oleh banyak orang.
+      Saya adalah pelajar RPL yang fokus pada pembuatan website modern,
+      simple, dan user-friendly.
     </p>
-
   </div>
 </section>
 
@@ -67,16 +52,46 @@
   </div>
 </section>
 
+<!-- F1 FORM -->
+<section id="f1">
+  <h3>F1 Race Input</h3>
+
+  <form id="f1Form">
+
+    <input type="text" id="nama" placeholder="Nama Anda" required>
+
+    <p>Pembalap:</p>
+    <label><input type="radio" name="driver" value="Verstappen"> Verstappen</label>
+    <label><input type="radio" name="driver" value="Hamilton"> Hamilton</label>
+    <label><input type="radio" name="driver" value="Leclerc"> Leclerc</label>
+
+    <p>Tim:</p>
+    <label><input type="checkbox" value="Red Bull"> Red Bull</label>
+    <label><input type="checkbox" value="Mercedes"> Mercedes</label>
+    <label><input type="checkbox" value="Ferrari"> Ferrari</label>
+
+    <p>Posisi:</p>
+    <select id="posisi">
+      <option value="">-- pilih --</option>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>DNF</option>
+    </select>
+
+    <button type="submit">Simpan</button>
+  </form>
+
+  <div id="output"></div>
+
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <h3>Contact</h3>
-  <p>Email: naufalfawwazz@gmail.com</p>
-  <p>Phone: 0878-8117-48266</p>
+  <p>Email: naufal@gmail.com</p>
 </section>
 
-<footer>
-  <p>© 2026 NFL</p>
-</footer>
-
+<script src="script.js"></script>
 </body>
 </html>
