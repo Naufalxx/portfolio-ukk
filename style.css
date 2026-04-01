@@ -115,3 +115,8 @@ footer {
   padding: 20px;
   color: #777;
 }
+
+header.scrolled {
+  background: rgba(15,15,15,0.7);
+  backdrop-filter: blur(10px);
+}
